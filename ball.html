@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ball</title>
+
+	<style>
+		body{
+			background-color: yellow;
+			animation-name: anim-bg;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+		}
+
+		.spec{
+			position: relative;
+			margin-top:275px;
+		}
+		.ball{
+			height: 100px;
+			width:100px;
+			margin-top: 0px;
+			position: relative;
+			border-radius: 50%;
+			background-color: black;
+			animation-name: bounce,anim-colo;
+    		animation-duration: 3s;
+            animation-iteration-count: infinite;
+        	
+        	}
+
+        	.heart{
+        		height:50px;
+        		width: 50px;
+        		background-color: black;
+        		transform: rotate(-45deg);
+        		margin: auto;
+        		top: 0;
+        		left:0;
+        		right: 0;
+        		bottom: 0;
+          		position: absolute;
+          		animation-name: pump, anim-colo;
+          		animation-duration: 3s;
+          		animation-iteration-count: infinite;
+        	}
+
+        	.heart:after {
+   				background-color: black;
+    			content:"";
+   				border-radius: 50%;
+ 			   	position: absolute;
+    			width: 50px;
+   				height: 50px;
+    			top: 0px;
+    			left: 25px;
+          		animation-name: anim-colo;
+          		animation-duration: 3s;
+          		animation-iteration-count: infinite;
+          		animation-name: anim-colo;
+
+
+  			}
+
+
+        	.heart:before{
+        		content: "";
+        		height:50px;
+        		width: 50px;
+        		background-color: black;
+        		position: absolute;
+        		left: 0px;
+        		top:-25px;
+        		border-radius: 50%;
+          		animation-name: anim-colo;
+          		animation-duration: 3s;
+          		animation-iteration-count: infinite;
+
+        	}
+
+		.innerheart{
+        		height:25px;
+        		width: 25px;
+        		background-color: yellow;
+        		margin: auto;
+        		transform: rotate(-45deg);
+        		top: 0;
+        		left:0;
+        		right: 0;
+        		bottom: 0;
+          		position: absolute;
+          		animation-name: pump, anim-bg;
+          		animation-duration: 3s;
+          		animation-iteration-count: infinite;
+        	}
+
+        	.innerheart:after {
+   				background-color: yellow;
+    			content:"";
+   				border-radius: 50%;
+ 			   	position: absolute;
+
+    			width: 25px;
+   				height: 25px;
+    			top: 0px;
+    			left: 15px;
+          		animation-name: anim-bg;
+          		animation-duration: 3s;
+          		animation-iteration-count: infinite;
+     
+
+
+  			}
+
+
+        	.innerheart:before{
+        		content: "";
+        		height:25px;
+        		width: 25px;
+        		background-color: yellow;
+        		position: absolute;
+        		left: 0px;
+        		top:-15px;
+        		border-radius: 50%;
+          		animation-name: anim-bg;
+          		animation-duration: 3s;
+          		animation-iteration-count: infinite;
+
+        	}
+        	
+        	#first{
+        		left: 10%;
+        	}
+
+            @keyframes bounce{
+            	0%{
+            		top:0px;
+            	}
+            	50%{ 
+            		top:200px;
+            	}
+            	100%{
+            		top:0px;
+            	}
+
+		}
+		@keyframes pump{
+			0%{
+				transform: scale(1) rotate(-45deg);
+			}
+			50%{
+				transform: scale(2) rotate(-45deg);
+			}
+
+
+		}
+		@keyframes anim-colo{
+
+			50%{
+			background-color: yellow;				
+			}
+		}
+		@keyframes anim-bg{
+
+			50%{
+			background-color: black;				
+			}
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="ball" id="first" style="float:left;"></div>
+	<div class="heart" style="float:left"></div>
+	<div class="innerheart"></div>
+	
+	<div class="ball" id="first"></div>
+<hr class="spec">
+	</body>
+</html>
